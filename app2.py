@@ -1,27 +1,24 @@
 import streamlit as st
 import pandas as pd
-from newspaper3k import Article
 from wordcloud import WordCloud, STOPWORDS, ImageColorGenerator
 import matplotlib.pyplot as plt
 
 st.header('Word Clouds by')
 st.markdown('Quality Gurus')
 
-article = Article('https://asq.org/cert/resource/docs/2016/CSQP%202016%20Final%20BOK.pdf')
+articletext = "This is a long text to check the function of word cloud"
 
-article.download()
-article.parse()
 
 #article.text
-article.text = article.text + (20 * 'qualitygurus ')
-article.text
+articletext = articletext + (20 * 'qualitygurus ')
+articletext
 
 
 STOPWORDS.update(['apply', 'evaluate', 'analyze', 'analysis'])
 STOPWORDS
 
 wc = WordCloud()
-wc.generate(article.text)
+wc.generate(articletext)
 plt.imshow(wc, interpolation="bilinear")
 plt.axis('off')
 plt.show()
