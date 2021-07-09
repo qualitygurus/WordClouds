@@ -14,7 +14,7 @@ st.markdown('An App by Sandeep Kumar')
 #article.text
 articletext = st.text_area("Please paste the text here, and press CTR+ENTER", "Text to convert to Word Cloud goes here.")
 articletext = articletext + (10 * 'qualitygurus ')
-STOPWORDS.update(['apply', 'evaluate', 'analyze', 'analysis', 'edit', 'will'])
+STOPWORDS.update(['apply', 'evaluate', 'analyze', 'analysis', 'edit', 'will', 'using', 'A', 'B', 'C', 'D', 'E'])
 
 #Background image
 backoption = st.selectbox('Select Background', ['Thumb', 'Bulb', 'Square', 'World Map'])
@@ -29,7 +29,7 @@ plt.figure( figsize=(20,10), facecolor='white')
 wc = WordCloud(stopwords=STOPWORDS, font_path="Roboto-Bold.ttf",
                mask=mask, background_color="white",
                max_words=wordcount, max_font_size=256,
-               random_state=42, width=mask.shape[1],
+               width=mask.shape[1],
                height=mask.shape[0], contour_width=1, contour_color='steelblue')
 
 
