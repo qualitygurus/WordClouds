@@ -9,7 +9,7 @@ st.header('Word Clouds by')
 st.markdown('Quality Gurus')
 
 
-articletext = st.text_area("Please paste the text here", "Text to convert to Word Cloud goes here.")
+articletext = st.text_area("Please paste the text here, and press CTR+ENTER", "Text to convert to Word Cloud goes here.")
 
 
 #article.text
