@@ -8,7 +8,7 @@ st.set_option('deprecation.showPyplotGlobalUse', False)
 st.header('Word Clouds by Quality Gurus')
 st.markdown('An App by Sandeep Kumar')
 
-background = st.multiselect('Select Background', ['Square', 'World Map'])
+background = st.selectbox('Select Background', ['Square', 'World Map'])
 articletext = st.text_area("Please paste the text here, and press CTR+ENTER", "Text to convert to Word Cloud goes here.")
 
 
