@@ -5,8 +5,8 @@ import matplotlib.pyplot as plt
 
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
-st.header('Word Clouds by')
-st.markdown('Quality Gurus')
+st.header('Word Clouds by Quality Gurus')
+st.markdown('An App by Sandeep Kumar')
 
 
 articletext = st.text_area("Please paste the text here, and press CTR+ENTER", "Text to convert to Word Cloud goes here.")
