@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-from newspaper import Article
+from newspaper3k import Article
 from wordcloud import WordCloud, STOPWORDS, ImageColorGenerator
 import matplotlib.pyplot as plt
 
