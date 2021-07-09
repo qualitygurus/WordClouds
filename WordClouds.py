@@ -17,7 +17,7 @@ articletext = articletext + (10 * 'qualitygurus ')
 STOPWORDS.update(['apply', 'evaluate', 'analyze', 'analysis', 'edit', 'will', 'using', 'A', 'B', 'C', 'D', 'E'])
 
 #Background image
-backoption = st.selectbox('Select Background', ['Thumb', 'Bulb', 'Square', 'World Map'])
+backoption = st.selectbox('Select Background', ['Thumb', 'Bulb', 'Square', 'World Map', 'Car', 'Bird', 'Man', 'Tree1', 'Tree2', 'Cloud', 'Heart'])
 backimage = backoption+'.jpg'
 mask = np.array(Image.open(backimage))
 
