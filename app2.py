@@ -10,7 +10,7 @@ st.set_option('deprecation.showPyplotGlobalUse', False)
 st.header('Word Clouds by Quality Gurus')
 st.markdown('An App by Sandeep Kumar')
 
-backoption = st.selectbox('Select Background', ['Square', 'World Map'])
+backoption = st.selectbox('Select Background', ['Square', 'World Map', 'Thumb'])
 backimage = backoption+'.jpg'
 mask = np.array(Image.open(backimage))
 
