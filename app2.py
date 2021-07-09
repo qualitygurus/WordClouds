@@ -14,7 +14,7 @@ background = st.selectbox('Select Background', ['Square', 'World Map'])
 articletext = st.text_area("Please paste the text here, and press CTR+ENTER", "Text to convert to Word Cloud goes here.")
 
 
-mask = np.array(Image.open('images\World Map.jpg'))
+mask = np.array(Image.open('images\\World Map.jpg'))
 
 #article.text
 articletext = articletext + (10 * 'qualitygurus ')
