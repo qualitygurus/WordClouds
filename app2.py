@@ -11,11 +11,11 @@ articletext = "This is a long text to check the function of word cloud"
 
 #article.text
 articletext = articletext + (20 * 'qualitygurus ')
-articletext
+
 
 
 STOPWORDS.update(['apply', 'evaluate', 'analyze', 'analysis'])
-STOPWORDS
+
 
 wc = WordCloud()
 wc.generate(articletext)
