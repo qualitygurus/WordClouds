@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 from wordcloud import WordCloud, STOPWORDS, ImageColorGenerator
 import matplotlib.pyplot as plt
+from PIL import Image, ImageFilter
 
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
