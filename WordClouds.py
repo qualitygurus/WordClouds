@@ -11,28 +11,21 @@ st.set_option('deprecation.showPyplotGlobalUse', False)
 st.header('Word Clouds by Quality Gurus')
 st.markdown('An App by Sandeep Kumar')
 
+#article.text
+articletext = st.text_area("Please paste the text here, and press CTR+ENTER", "Text to convert to Word Cloud goes here.")
+articletext = articletext + (10 * 'qualitygurus ')
+STOPWORDS.update(['apply', 'evaluate', 'analyze', 'analysis', 'edit', 'will'])
+
+#Background image
 backoption = st.selectbox('Select Background', ['Thumb', 'Bulb', 'Square', 'World Map'])
 backimage = backoption+'.jpg'
 mask = np.array(Image.open(backimage))
-
 
 #Number of words to be included
 wordcount = st.slider('Word Count', min_value=50, max_value=500, value=50, step=50)
 
 
-articletext = st.text_area("Please paste the text here, and press CTR+ENTER", "Text to convert to Word Cloud goes here.")
-
-#article.text
-articletext = articletext + (10 * 'qualitygurus ')
-STOPWORDS.update(['apply', 'evaluate', 'analyze', 'analysis'])
-
-
-
 plt.figure( figsize=(20,10), facecolor='white')
-
-stopwords = list(STOPWORDS) + ['edit','will' ]
-
-
 wc = WordCloud(stopwords=STOPWORDS, font_path="Roboto-Bold.ttf",
                mask=mask, background_color="white",
                max_words=wordcount, max_font_size=256,
