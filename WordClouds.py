@@ -17,17 +17,20 @@ articletext = articletext + (10 * 'qualitygurus ')
 STOPWORDS.update(['apply', 'evaluate', 'analyze', 'analysis', 'edit', 'will', 'using', 'A', 'B', 'C', 'D', 'E'])
 
 #Background image
-backoption = st.selectbox('Select Background', ['Thumb', 'Bulb', 'Square', 'World Map', 'Car', 'Bird', 'Man', 'Tree1', 'Tree2', 'Cloud', 'Heart'])
+backoption = st.selectbox('Select Background Image', ['Thumb', 'Bulb', 'Square', 'World Map', 'Car', 'Bird', 'Man', 'Tree1', 'Tree2', 'Cloud', 'Heart'])
 backimage = backoption+'.jpg'
 mask = np.array(Image.open(backimage))
 
 #Number of words to be included
 wordcount = st.slider('Word Count', min_value=50, max_value=500, value=50, step=50)
 
+#Background color
+backcolor = st.selectbox('Select Background Color', ['white', 'black', 'steelblue'])
+
 
 plt.figure( figsize=(20,10), facecolor='white')
 wc = WordCloud(stopwords=STOPWORDS, font_path="Roboto-Bold.ttf",
-               mask=mask, background_color="white",
+               mask=mask, background_color=backcolor,
                max_words=wordcount, max_font_size=256,
                width=mask.shape[1],
                height=mask.shape[0], contour_width=1, contour_color='steelblue')
