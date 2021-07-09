@@ -13,17 +13,23 @@ articletext = st.text_area("Please paste the text here, and press CTR+ENTER", "T
 
 
 #article.text
-articletext = articletext + (20 * 'qualitygurus ')
+articletext = articletext + (10 * 'qualitygurus ')
 
 
 
 STOPWORDS.update(['apply', 'evaluate', 'analyze', 'analysis'])
 
 
-wc = WordCloud()
-wc.generate(articletext)
+
+plt.figure( figsize=(20,10), facecolor='k')
+
+stopwords = list(STOPWORDS) + ['edit','will' ]
+wc = WordCloud(stopwords=stopwords, font_path=font_path, 
+               background_color="white", max_words=200,
+               max_font_size=300, random_state=40,
+               width=2000, height=1000)
+wc.generate(article.text)
 plt.imshow(wc, interpolation="bilinear")
 plt.axis('off')
 fig1 = plt.show()
 st.pyplot(fig1)
-
