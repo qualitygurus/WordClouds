@@ -22,7 +22,7 @@ backimage = backoption+'.jpg'
 mask = np.array(Image.open(backimage))
 
 #Background color
-backcolor = st.selectbox('Select Background Color', ['white', 'black', 'steelblue'])
+backcolor = st.selectbox('Select Background Color', ['white', 'black', 'slategrey', 'wheat', 'firebrick', 'lightgreen', 'lavender'])
 
 #Number of words to be included
 wordcount = st.slider('Word Count', min_value=50, max_value=500, value=50, step=50)
