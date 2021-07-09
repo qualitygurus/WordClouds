@@ -8,7 +8,8 @@ st.set_option('deprecation.showPyplotGlobalUse', False)
 st.header('Word Clouds by')
 st.markdown('Quality Gurus')
 
-articletext = "This is a long text to check the function of word cloud"
+
+articletext = st.text_area("Please paste the text here", default_value_goes_here)
 
 
 #article.text
@@ -25,3 +26,4 @@ plt.imshow(wc, interpolation="bilinear")
 plt.axis('off')
 fig1 = plt.show()
 st.pyplot(fig1)
+
