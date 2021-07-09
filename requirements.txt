@@ -7,4 +7,3 @@ wordcloud
 matplotlib
 wordcloud
 numpy
-PIL
