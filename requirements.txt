@@ -5,4 +5,4 @@ regex
 bs4
 wordcloud
 matplotlib
-plotly.express
+newspaper
