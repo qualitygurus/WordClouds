@@ -1,13 +1,27 @@
 import streamlit as st
 import pandas as pd
-import plotly.express as px
+from newspaper import Article
+from wordcloud import WordCloud, STOPWORDS, ImageColorGenerator
+import matplotlib.pyplot as plt
 
-a = st.sidebar.radio('R:',[1,2])
+st.header('Word Clouds by')
+st.markdown('Quality Gurus')
 
-st.header('My First App')
-st.markdown('Sandeep Kumar')
-df = pd.read_csv('iris.csv')
-graph = px.line(df, x= 'sepal.length', y='sepal.width') 
-st.plotly_charts(graph)
+article = Article('https://asq.org/cert/resource/docs/2016/CSQP%202016%20Final%20BOK.pdf')
 
-st.write(df)
+article.download()
+article.parse()
+
+#article.text
+article.text = article.text + (20 * 'qualitygurus ')
+article.text
+
+
+STOPWORDS.update(['apply', 'evaluate', 'analyze', 'analysis'])
+STOPWORDS
+
+wc = WordCloud()
+wc.generate(article.text)
+plt.imshow(wc, interpolation="bilinear")
+plt.axis('off')
+plt.show()
