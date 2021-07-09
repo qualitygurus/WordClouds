@@ -24,7 +24,7 @@ STOPWORDS.update(['apply', 'evaluate', 'analyze', 'analysis'])
 plt.figure( figsize=(20,10), facecolor='k')
 
 stopwords = list(STOPWORDS) + ['edit','will' ]
-wc = WordCloud(stopwords=stopwords, font_path=font_path, 
+wc = WordCloud(stopwords=stopwords,  
                background_color="white", max_words=200,
                max_font_size=300, random_state=40,
                width=2000, height=1000)
