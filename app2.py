@@ -3,6 +3,8 @@ import pandas as pd
 from wordcloud import WordCloud, STOPWORDS, ImageColorGenerator
 import matplotlib.pyplot as plt
 
+st.set_option('deprecation.showPyplotGlobalUse', False)
+
 st.header('Word Clouds by')
 st.markdown('Quality Gurus')
 
