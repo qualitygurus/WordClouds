@@ -5,5 +5,4 @@ regex
 bs4
 wordcloud
 matplotlib
-newspaper3k
 wordcloud
