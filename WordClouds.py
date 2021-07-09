@@ -21,11 +21,11 @@ backoption = st.selectbox('Select Background Image', ['Thumb', 'Bulb', 'Square',
 backimage = backoption+'.jpg'
 mask = np.array(Image.open(backimage))
 
-#Number of words to be included
-wordcount = st.slider('Word Count', min_value=50, max_value=500, value=50, step=50)
-
 #Background color
 backcolor = st.selectbox('Select Background Color', ['white', 'black', 'steelblue'])
+
+#Number of words to be included
+wordcount = st.slider('Word Count', min_value=50, max_value=500, value=50, step=50)
 
 
 plt.figure( figsize=(20,10), facecolor='white')
