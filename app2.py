@@ -10,11 +10,13 @@ st.set_option('deprecation.showPyplotGlobalUse', False)
 st.header('Word Clouds by Quality Gurus')
 st.markdown('An App by Sandeep Kumar')
 
-background = st.selectbox('Select Background', ['Square', 'World Map'])
+backoption = st.selectbox('Select Background', ['Square', 'World Map'])
+backimage = backoption+'.jpg'
+
 articletext = st.text_area("Please paste the text here, and press CTR+ENTER", "Text to convert to Word Cloud goes here.")
 
 
-mask = np.array(Image.open('World Map.jpg'))
+mask = np.array(Image.open(backimage))
 
 #article.text
 articletext = articletext + (10 * 'qualitygurus ')
