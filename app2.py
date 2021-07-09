@@ -36,7 +36,7 @@ wc = WordCloud(stopwords=STOPWORDS, font_path="Roboto-Bold.ttf",
                mask=mask, background_color="white",
                max_words=wordcount, max_font_size=256,
                random_state=42, width=mask.shape[1],
-               height=mask.shape[0], , contour_width=1, contour_color='steelblue')
+               height=mask.shape[0], contour_width=1, contour_color='steelblue')
 
 
 wc.generate(articletext)
