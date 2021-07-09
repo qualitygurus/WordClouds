@@ -28,7 +28,7 @@ wc = WordCloud(stopwords=stopwords,
                background_color="white", max_words=200,
                max_font_size=300, random_state=40,
                width=2000, height=1000)
-wc.generate(article.text)
+wc.generate(articletext)
 plt.imshow(wc, interpolation="bilinear")
 plt.axis('off')
 fig1 = plt.show()
