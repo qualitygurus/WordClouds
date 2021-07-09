@@ -27,7 +27,7 @@ wordcount = st.slider('Word Count', min_value=50, max_value=500, value=50, step=
 
 plt.figure( figsize=(20,10), facecolor='white')
 wc = WordCloud(stopwords=STOPWORDS, font_path="Roboto-Bold.ttf",
-               mask=mask, background_color="white",
+               mask=mask, background_color="black",
                max_words=wordcount, max_font_size=256,
                width=mask.shape[1],
                height=mask.shape[0], contour_width=1, contour_color='steelblue')
@@ -39,10 +39,3 @@ plt.axis('off')
 fig1 = plt.show()
 st.pyplot(fig1)
 
-
-def get_image_download_link(fig1,filename,text):
-    buffered = BytesIO()
-    img.save(buffered, format="PNG")
-    img_str = base64.b64encode(buffered.getvalue()).decode()
-    href =  f'<a href="data:file/txt;base64,{img_str}" download="{filename}">{text}</a>'
-    return href
