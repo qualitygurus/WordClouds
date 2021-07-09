@@ -12,17 +12,17 @@ st.markdown('An App by Sandeep Kumar')
 
 backoption = st.selectbox('Select Background', ['Square', 'World Map'])
 backimage = backoption+'.jpg'
+mask = np.array(Image.open(backimage))
+
+
+#Number of words to be included
+wordcount = st.slider('Word Count', min_value=50, max_value=500, value=50, step=50)
+
 
 articletext = st.text_area("Please paste the text here, and press CTR+ENTER", "Text to convert to Word Cloud goes here.")
 
-
-mask = np.array(Image.open(backimage))
-
 #article.text
 articletext = articletext + (10 * 'qualitygurus ')
-
-
-
 STOPWORDS.update(['apply', 'evaluate', 'analyze', 'analysis'])
 
 
