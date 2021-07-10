@@ -33,8 +33,8 @@ plt.figure( figsize=(20,10), facecolor='white')
 wc = WordCloud(stopwords=STOPWORDS, font_path="Roboto-Bold.ttf",
                mask=mask, background_color=backcolor,
                max_words=wordcount, max_font_size=256,
-               width=mask.shape[4], 
-               height=mask.shape[0], contour_width=1, contour_color='steelblue')
+               width=mask.shape[1], 
+               height=mask.shape[0], contour_width=4, contour_color='steelblue')
 
 
 wc.generate(articletext)
