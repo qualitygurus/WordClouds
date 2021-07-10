@@ -16,18 +16,16 @@ articletext = st.text_area("Please paste the text here, and press CTR+ENTER", "T
 articletext = articletext + (10 * 'qualitygurus ')
 STOPWORDS.update(['apply', 'evaluate', 'analyze', 'analysis', 'edit', 'will', 'using', 'A', 'B', 'C', 'D', 'E'])
 
-left_column, right_column = st.beta_columns(2)
-
 #Background image
-backoption = left_column.selectbox('Select Background Image', ['Thumb', 'Bulb', 'Square', 'World Map', 'Car', 'Bird', 'Man', 'Tree1', 'Tree2', 'Cloud', 'Heart'])
+backoption = st.sidebar.selectbox('Select Background Image', ['Thumb', 'Bulb', 'Square', 'World Map', 'Car', 'Bird', 'Man', 'Tree1', 'Tree2', 'Cloud', 'Heart'])
 backimage = backoption+'.jpg'
 mask = np.array(Image.open(backimage))
 
 #Background color
-backcolor = right_column.selectbox('Select Background Color', ['white', 'black', 'slategrey', 'wheat', 'firebrick', 'lightgreen', 'lavender'])
+backcolor = st.sidebar.selectbox('Select Background Color', ['white', 'black', 'slategrey', 'wheat', 'firebrick', 'lightgreen', 'lavender'])
 
 #Number of words to be included
-wordcount = st.slider('Word Count', min_value=50, max_value=500, value=50, step=50)
+wordcount = st.sidebar.slider('Word Count', min_value=50, max_value=500, value=50, step=50)
 
 
 plt.figure( figsize=(20,10), facecolor='white')
