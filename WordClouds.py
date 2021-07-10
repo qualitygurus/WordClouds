@@ -11,10 +11,12 @@ st.set_option('deprecation.showPyplotGlobalUse', False)
 st.header('Word Clouds by Quality Gurus')
 st.markdown('An App by Sandeep Kumar')
 
-#article.text
-articletext = st.text_area("Please paste the text here, and press CTR+ENTER", "Text to convert to Word Cloud goes here.")
-articletext = articletext + (10 * 'qualitygurus ')
-STOPWORDS.update(['apply', 'evaluate', 'analyze', 'analysis', 'edit', 'will', 'using', 'A', 'B', 'C', 'D', 'E'])
+sidebar = st.sidebar()
+with sidebar:
+  #article.text
+  articletext = st.text_area("Please paste the text here, and press CTR+ENTER", "Text to convert to Word Cloud goes here.")
+  articletext = articletext + (10 * 'qualitygurus ')
+  STOPWORDS.update(['apply', 'evaluate', 'analyze', 'analysis', 'edit', 'will', 'using', 'A', 'B', 'C', 'D', 'E'])
 
 #Background image
 backoption = st.selectbox('Select Background Image', ['Thumb', 'Bulb', 'Square', 'World Map', 'Car', 'Bird', 'Man', 'Tree1', 'Tree2', 'Cloud', 'Heart'])
