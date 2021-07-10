@@ -14,17 +14,17 @@ st.markdown('An App by Sandeep Kumar')
 left_column, right_column = st.beta_columns(2)
 
 #article.text
-articletext = left_column.text_area("Please paste the text here, and press CTR+ENTER", "Text to convert to Word Cloud goes here.")
+articletext = text_area("Please paste the text here, and press CTR+ENTER", "Text to convert to Word Cloud goes here.")
 articletext = articletext + (10 * 'qualitygurus ')
 STOPWORDS.update(['apply', 'evaluate', 'analyze', 'analysis', 'edit', 'will', 'using', 'A', 'B', 'C', 'D', 'E'])
 
 #Background image
-backoption = st.selectbox('Select Background Image', ['Thumb', 'Bulb', 'Square', 'World Map', 'Car', 'Bird', 'Man', 'Tree1', 'Tree2', 'Cloud', 'Heart'])
+backoption = left_column.selectbox('Select Background Image', ['Thumb', 'Bulb', 'Square', 'World Map', 'Car', 'Bird', 'Man', 'Tree1', 'Tree2', 'Cloud', 'Heart'])
 backimage = backoption+'.jpg'
 mask = np.array(Image.open(backimage))
 
 #Background color
-backcolor = st.selectbox('Select Background Color', ['white', 'black', 'slategrey', 'wheat', 'firebrick', 'lightgreen', 'lavender'])
+backcolor = right_column.selectbox('Select Background Color', ['white', 'black', 'slategrey', 'wheat', 'firebrick', 'lightgreen', 'lavender'])
 
 #Number of words to be included
 wordcount = st.slider('Word Count', min_value=50, max_value=500, value=50, step=50)
