@@ -11,9 +11,10 @@ st.set_option('deprecation.showPyplotGlobalUse', False)
 st.header('Word Clouds by Quality Gurus')
 st.markdown('An App by Sandeep Kumar')
 
+left_column, right_column = st.beta_columns(2)
 
 #article.text
-articletext = st.text_area("Please paste the text here, and press CTR+ENTER", "Text to convert to Word Cloud goes here.")
+articletext = left_column.text_area("Please paste the text here, and press CTR+ENTER", "Text to convert to Word Cloud goes here.")
 articletext = articletext + (10 * 'qualitygurus ')
 STOPWORDS.update(['apply', 'evaluate', 'analyze', 'analysis', 'edit', 'will', 'using', 'A', 'B', 'C', 'D', 'E'])
 
