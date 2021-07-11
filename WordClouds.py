@@ -5,8 +5,9 @@ from wordcloud import WordCloud, STOPWORDS, ImageColorGenerator
 import matplotlib.pyplot as plt
 import random
 from PIL import Image, ImageFilter
-#from Newspaper import Article
 
+#Test Area
+import BeautifulSoup
 url = "https://www.qualitygurus.com"
 html = urlopen(url).read()
 articletext = BeautifulSoup(html)
