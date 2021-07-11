@@ -7,4 +7,4 @@ wordcloud
 matplotlib
 numpy
 Pillow
-Newspaper
+BeautifulSoup
