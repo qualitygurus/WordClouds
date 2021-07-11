@@ -44,7 +44,7 @@ wc = WordCloud(stopwords=STOPWORDS, font_path="Roboto-Bold.ttf",
 wc.generate(articletext)
 plt.imshow(wc, interpolation="bilinear")
 #plt.imshow(wc.recolor(color_func=grey_color_func, random_state=3),
-           interpolation="bilinear")
+#           interpolation="bilinear")
 plt.axis('off')
 fig1 = plt.show()
 st.pyplot(fig1)
