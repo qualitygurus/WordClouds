@@ -6,14 +6,6 @@ import matplotlib.pyplot as plt
 import random
 from PIL import Image, ImageFilter
 
-#Test Area
-import bs4 as bs
-import urllib.request
-url = "https://www.qualitygurus.com"
-html = urllib.request.urlopen(url).read()
-soup = bs.BeautifulSoup(html, features="html.parser")
-articletext = soup.get_text()
-
 
 def grey_color_func(word, font_size, position, orientation, random_state=None,
                     **kwargs):
@@ -26,8 +18,18 @@ st.markdown('An App by Sandeep Kumar')
 st.markdown('Right click on the image to save it on your drive')
 
 #article.text
-#articletext = st.sidebar.text_area("Please paste the text here, and press CTR+ENTER", "Text to convert to Word Cloud goes here.")
-#articletext = articletext + (10 * 'qualitygurus ')
+
+#Link
+import bs4 as bs
+import urllib.request
+url = st.sidebar.text_area(("Please enter the URL here, and press CTR+ENTER", "URL of the website")
+html = urllib.request.urlopen(url).read()
+soup = bs.BeautifulSoup(html, features="html.parser")
+articletext = soup.get_text()
+
+#Text
+articletext = st.sidebar.text_area("Please paste the text here, and press CTR+ENTER", "Text to convert to Word Cloud goes here.")
+articletext = articletext + (10 * 'qualitygurus ')
 STOPWORDS.update(['apply', 'evaluate', 'analyze', 'analysis', 'edit', 'will', 'using', 'A', 'B', 'C', 'D', 'E'])
 
 #Background image
