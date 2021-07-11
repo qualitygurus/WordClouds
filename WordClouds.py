@@ -11,7 +11,7 @@ import bs4 as bs
 import urllib.request
 url = "https://www.qualitygurus.com"
 html = urllib.request.urlopen(url).read()
-soup = bs.BeautifulSoup(html)
+soup = bs.BeautifulSoup(html, features="html.parser)
 articletext = print(soup.get_text())
 
 
