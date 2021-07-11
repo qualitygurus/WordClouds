@@ -4,7 +4,7 @@ requests
 regex
 bs4
 wordcloud
-matplotlib
+matplotlib==3.2.2
 wordcloud
 numpy
 Pillow
