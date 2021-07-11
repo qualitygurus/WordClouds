@@ -25,8 +25,8 @@ st.markdown('An App by Sandeep Kumar')
 st.markdown('Right click on the image to save it on your drive')
 
 #article.text
-articletext = st.sidebar.text_area("Please paste the text here, and press CTR+ENTER", "Text to convert to Word Cloud goes here.")
-articletext = articletext + (10 * 'qualitygurus ')
+#articletext = st.sidebar.text_area("Please paste the text here, and press CTR+ENTER", "Text to convert to Word Cloud goes here.")
+#articletext = articletext + (10 * 'qualitygurus ')
 STOPWORDS.update(['apply', 'evaluate', 'analyze', 'analysis', 'edit', 'will', 'using', 'A', 'B', 'C', 'D', 'E'])
 
 #Background image
