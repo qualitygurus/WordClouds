@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 from wordcloud import WordCloud, STOPWORDS, ImageColorGenerator
 import matplotlib.pyplot as plt
+import random
 from PIL import Image, ImageFilter
 
 def grey_color_func(word, font_size, position, orientation, random_state=None,
