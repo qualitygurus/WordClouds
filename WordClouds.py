@@ -26,14 +26,14 @@ backoption = st.sidebar.selectbox('Select Background Image', ['Thumb', 'Bulb', '
 backimage = backoption+'.jpg'
 mask = np.array(Image.open(backimage))
 
+#Contour Width
+contourwidth = st.sidebar.slider('Contour Width', min_value=0, max_value=5, value=2, step=1)
+
 #Background color
 backcolor = st.sidebar.selectbox('Select Background Color', ['white', 'black', 'slategrey', 'wheat', 'firebrick', 'lightgreen', 'lavender'])
 
 #Number of words to be included
 wordcount = st.sidebar.slider('Word Count', min_value=50, max_value=500, value=50, step=50)
-
-#Number of words to be included
-contourwidth = st.sidebar.slider('Contour Width', min_value=0, max_value=5, value=2, step=1)
 
 plt.figure( figsize=(20,10), facecolor='white')
 wc = WordCloud(stopwords=STOPWORDS, font_path="Roboto-Bold.ttf",
