@@ -19,16 +19,18 @@ st.markdown('Right click on the image to save it on your drive')
 
 #article.text
 
+#Text
+articletext = st.sidebar.text_area("Please paste the text here, and press CTR+ENTER", "Text to convert to Word Cloud goes here.")
+
 #Link
 import bs4 as bs
 import urllib.request
-url = st.sidebar.text_area("Please enter the URL here, and press CTR+ENTER", "URL of the website")
+url = st.sidebar.text_area("Please enter the URL here, and press CTR+ENTER", "https://www.qualitygurus.com")
 html = urllib.request.urlopen(url).read()
 soup = bs.BeautifulSoup(html, features="html.parser")
 articletext = soup.get_text()
 
-#Text
-articletext = st.sidebar.text_area("Please paste the text here, and press CTR+ENTER", "Text to convert to Word Cloud goes here.")
+
 articletext = articletext + (10 * 'qualitygurus ')
 STOPWORDS.update(['apply', 'evaluate', 'analyze', 'analysis', 'edit', 'will', 'using', 'A', 'B', 'C', 'D', 'E'])
 
