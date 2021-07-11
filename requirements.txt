@@ -5,7 +5,6 @@ regex==2021.7.6
 bs4
 wordcloud
 matplotlib==3.2.2
-wordcloud==1.8.0
 numpy==1.18.1
 Pillow==8.3.1
 Newspaper
