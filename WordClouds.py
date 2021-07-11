@@ -5,7 +5,7 @@ from wordcloud import WordCloud, STOPWORDS, ImageColorGenerator
 import matplotlib.pyplot as plt
 import random
 from PIL import Image, ImageFilter
-from newspaper import Article
+#from Newspaper import Article
 
 
 def grey_color_func(word, font_size, position, orientation, random_state=None,
