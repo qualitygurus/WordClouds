@@ -8,3 +8,4 @@ matplotlib
 wordcloud
 numpy
 Pillow
+newspaper
