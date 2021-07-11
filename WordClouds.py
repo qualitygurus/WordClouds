@@ -13,14 +13,14 @@ def grey_color_func(word, font_size, position, orientation, random_state=None,
 
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
-st.header('Word Clouds by Quality Gurus')
+st.header('Create a Word Cloud for any URL')
 st.markdown('An App by Sandeep Kumar')
 st.markdown('Right click on the image to save it on your drive')
 
 #article.text
 
 #Text
-articletext = st.sidebar.text_area("Please paste the text here, and press CTR+ENTER", "Text to convert to Word Cloud goes here.")
+# articletext = st.sidebar.text_area("Please paste the text here, and press CTR+ENTER", "Text to convert to Word Cloud goes here.")
 
 #Link
 import bs4 as bs
