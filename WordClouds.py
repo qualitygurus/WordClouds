@@ -8,8 +8,9 @@ from PIL import Image, ImageFilter
 
 #Test Area
 import bs4 as bs
+import urllib.request
 url = "https://www.qualitygurus.com"
-html = urlopen(url).read()
+html = urllib.request.urlopen(url).read()
 articletext = bs.BeautifulSoup(html)
 
 
