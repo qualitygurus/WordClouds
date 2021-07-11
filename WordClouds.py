@@ -7,10 +7,10 @@ import random
 from PIL import Image, ImageFilter
 
 #Test Area
-import BeautifulSoup
+import bs4 as bs
 url = "https://www.qualitygurus.com"
 html = urlopen(url).read()
-articletext = BeautifulSoup(html)
+articletext = bs.BeautifulSoup(html)
 
 
 def grey_color_func(word, font_size, position, orientation, random_state=None,
