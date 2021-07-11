@@ -5,6 +5,9 @@ from wordcloud import WordCloud, STOPWORDS, ImageColorGenerator
 import matplotlib.pyplot as plt
 from PIL import Image, ImageFilter
 
+def grey_color_func(word, font_size, position, orientation, random_state=None,
+                    **kwargs):
+    return "hsl(0, 0%%, %d%%)" % random.randint(60, 100)
 
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
