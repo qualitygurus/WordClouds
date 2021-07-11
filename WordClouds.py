@@ -12,7 +12,7 @@ import urllib.request
 url = "https://www.qualitygurus.com"
 html = urllib.request.urlopen(url).read()
 soup = bs.BeautifulSoup(html, features="html.parser")
-articletext = print(soup.get_text())
+articletext = soup.get_text()
 
 
 def grey_color_func(word, font_size, position, orientation, random_state=None,
