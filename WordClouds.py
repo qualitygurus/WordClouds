@@ -58,6 +58,7 @@ wc = WordCloud(stopwords=STOPWORDS, font_path="Roboto-Bold.ttf",
 
 wc.generate(articletext)
 #plt.imshow(wc, interpolation="bilinear")
+image_colors = ImageColorGenerator(mask)
 plt.imshow(wc.recolor(color_func=image_colors), interpolation="bilinear")
 #plt.imshow(wc.recolor(color_func=grey_color_func, random_state=3),
 #           interpolation="bilinear")
