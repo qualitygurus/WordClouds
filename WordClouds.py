@@ -11,8 +11,8 @@ import bs4 as bs
 import urllib.request
 url = "https://www.qualitygurus.com"
 html = urllib.request.urlopen(url).read()
-articletext = bs.BeautifulSoup(html)
-st.write(articletext)
+soup = bs.BeautifulSoup(html)
+articletext = print(soup.get_text())
 
 
 def grey_color_func(word, font_size, position, orientation, random_state=None,
