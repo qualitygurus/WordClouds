@@ -1,9 +1,9 @@
 streamlit
-pandas==0.25.3 
+pandas
 requests
-regex==2021.7.6
+regex
 bs4
 wordcloud
-matplotlib==3.2.2
-numpy==1.18.1
-Pillow==8.3.1
+matplotlib
+numpy
+Pillow
