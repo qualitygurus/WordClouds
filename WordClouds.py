@@ -32,13 +32,15 @@ backcolor = st.sidebar.selectbox('Select Background Color', ['white', 'black', '
 #Number of words to be included
 wordcount = st.sidebar.slider('Word Count', min_value=50, max_value=500, value=50, step=50)
 
+#Number of words to be included
+contourwidth = st.sidebar.slider('Contour Width', min_value=0, max_value=5, value=2, step=1)
 
 plt.figure( figsize=(20,10), facecolor='white')
 wc = WordCloud(stopwords=STOPWORDS, font_path="Roboto-Bold.ttf",
                mask=mask, background_color=backcolor,
                max_words=wordcount, max_font_size=256,
                width=mask.shape[1], 
-               height=mask.shape[0], contour_width=4, contour_color='steelblue')
+               height=mask.shape[0], contour_width=contourwidth, contour_color='steelblue')
 
 
 wc.generate(articletext)
