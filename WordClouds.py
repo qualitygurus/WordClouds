@@ -22,7 +22,7 @@ st.markdown('Right click on the image to save it on your drive')
 #Link
 import bs4 as bs
 import urllib.request
-url = st.sidebar.text_area(("Please enter the URL here, and press CTR+ENTER", "URL of the website")
+url = st.sidebar.text_area("Please enter the URL here, and press CTR+ENTER", "URL of the website")
 html = urllib.request.urlopen(url).read()
 soup = bs.BeautifulSoup(html, features="html.parser")
 articletext = soup.get_text()
