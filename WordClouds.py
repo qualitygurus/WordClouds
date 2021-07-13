@@ -51,7 +51,7 @@ backcolor = st.sidebar.selectbox('Select Background Color', ['white', 'black', '
 wordcount = st.sidebar.slider('Word Count', min_value=50, max_value=500, value=150, step=50)
 
 #color or monochromatic?
-textcol = st.sidebar.selectbox("Colour Palette:", ['viridis', 'Accent', 'Dark2', 'inferno', 'Greys', 'Reds','hot', 'Set1'])
+textcol = st.sidebar.selectbox("Colour Palette:", ['viridis', 'Accent', 'Dark2', 'inferno', 'Greys', 'gist_gray', 'Reds','hot', 'Set1'])
 
 
 plt.figure( figsize=(20,10), facecolor='white')
