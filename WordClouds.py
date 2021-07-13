@@ -48,6 +48,10 @@ backcolor = st.sidebar.selectbox('Select Background Color', ['white', 'black', '
 #Number of words to be included
 wordcount = st.sidebar.slider('Word Count', min_value=50, max_value=500, value=150, step=50)
 
+#color or monochromatic?
+monochrom = st.radio("Colored or Monochromatic?", ('Color', 'Monochromatic'))
+
+
 plt.figure( figsize=(20,10), facecolor='white')
 wc = WordCloud(stopwords=STOPWORDS, font_path="Roboto-Bold.ttf",
                mask=mask, background_color=backcolor,
@@ -59,9 +63,13 @@ wc = WordCloud(stopwords=STOPWORDS, font_path="Roboto-Bold.ttf",
 wc.generate(articletext)
 #plt.imshow(wc, interpolation="bilinear")
 image_colors = ImageColorGenerator(mask)
-plt.imshow(wc.recolor(color_func=image_colors), interpolation="bilinear")
-#plt.imshow(wc.recolor(color_func=grey_color_func, random_state=3),
-#           interpolation="bilinear")
+
+if monochrom == 'Color':
+  plt.imshow(wc.recolor(color_func=grey_color_func, random_state=3), interpolation="bilinear")
+  else:
+  plt.imshow(wc.recolor(color_func=image_colors), interpolation="bilinear")
+  
+
 plt.axis('off')
 fig1 = plt.show()
 st.pyplot(fig1)
