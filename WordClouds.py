@@ -57,7 +57,7 @@ textcol = st.sidebar.selectbox("Colour Palette:", ['viridis', 'Accent', 'Dark2',
 textfont = st.sidebar.selectbox("Select Font:", ['Roboto-Bold.ttf', 'BungeeShade-Regular.ttf'])
 
 plt.figure( figsize=(20,10), facecolor='white')
-wc = WordCloud(stopwords=STOPWORDS, font_path='/font/'+textfont,
+wc = WordCloud(stopwords=STOPWORDS, font_path='/font/Roboto-Bold.ttf',
                mask=mask, background_color=backcolor,
                max_words=wordcount, max_font_size=256,
                width=mask.shape[1], colormap=textcol,
