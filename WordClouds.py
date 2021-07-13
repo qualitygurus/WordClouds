@@ -66,7 +66,7 @@ image_colors = ImageColorGenerator(mask)
 
 if monochrom == 'Color':
   plt.imshow(wc.recolor(color_func=grey_color_func, random_state=3), interpolation="bilinear")
-  else:
+else:
   plt.imshow(wc.recolor(color_func=image_colors), interpolation="bilinear")
   
 
