@@ -49,7 +49,7 @@ backcolor = st.sidebar.selectbox('Select Background Color', ['white', 'black', '
 wordcount = st.sidebar.slider('Word Count', min_value=50, max_value=500, value=150, step=50)
 
 #color or monochromatic?
-monochrom = st.sidebar.radio("Grey or Monochromatic?", ('Grey', 'Monochromatic', 'Multi Color'))
+monochrom = st.sidebar.radio("Text Colour:", ('Grey', 'Monochromatic', 'Multi Color'))
 
 
 plt.figure( figsize=(20,10), facecolor='white')
