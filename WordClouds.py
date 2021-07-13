@@ -51,14 +51,14 @@ backcolor = st.sidebar.selectbox('Select Background Color', ['white', 'black', '
 wordcount = st.sidebar.slider('Word Count', min_value=50, max_value=500, value=150, step=50)
 
 #color or monochromatic?
-monochrom = st.sidebar.radio("Text Colour:", ('Grey', 'Monochromatic', 'Multi Color'))
+textcol = st.sidebar.radio("Colour Palette:", ('Accent', 'Dark2', 'inferno'))
 
 
 plt.figure( figsize=(20,10), facecolor='white')
 wc = WordCloud(stopwords=STOPWORDS, font_path="Roboto-Bold.ttf",
                mask=mask, background_color=backcolor,
                max_words=wordcount, max_font_size=256,
-               width=mask.shape[1], colormap="Dark2",
+               width=mask.shape[1], colormap=textcol,
                height=mask.shape[0], contour_width=contourwidth, contour_color='black')
 
 
@@ -66,12 +66,13 @@ wc.generate(articletext)
 #plt.imshow(wc, interpolation="bilinear")
 image_colors = ImageColorGenerator(mask)
 
-if monochrom == 'Grey':
-  plt.imshow(wc.recolor(color_func=grey_color_func, random_state=3), interpolation="bilinear")
-elif monochrom =='Monochromatic':
-  plt.imshow(wc.recolor(color_func=image_colors), interpolation="bilinear")
-else:  
-  plt.imshow(wc)
+#if monochrom == 'Grey':
+#  plt.imshow(wc.recolor(color_func=grey_color_func, random_state=3), interpolation="bilinear")
+#elif monochrom =='Monochromatic':
+#  plt.imshow(wc.recolor(color_func=image_colors), interpolation="bilinear")
+#else:  
+  
+plt.imshow(wc, interpolation="bilinear")
   
 
 plt.axis('off')
