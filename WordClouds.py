@@ -49,7 +49,7 @@ backcolor = st.sidebar.selectbox('Select Background Color', ['white', 'black', '
 wordcount = st.sidebar.slider('Word Count', min_value=50, max_value=500, value=150, step=50)
 
 #color or monochromatic?
-monochrom = st.sidebar.radio("Grey or Monochromatic?", ('Grey', 'Monochromatic'))
+monochrom = st.sidebar.radio("Grey or Monochromatic?", ('Grey', 'Monochromatic', 'Multi Color'))
 
 
 plt.figure( figsize=(20,10), facecolor='white')
@@ -66,8 +66,10 @@ image_colors = ImageColorGenerator(mask)
 
 if monochrom == 'Grey':
   plt.imshow(wc.recolor(color_func=grey_color_func, random_state=3), interpolation="bilinear")
-else:
+elseif monochrom='Monochromatic':
   plt.imshow(wc.recolor(color_func=image_colors), interpolation="bilinear")
+else:  
+  plt.imshow(wordcloud)
   
 
 plt.axis('off')
