@@ -8,4 +8,5 @@ matplotlib
 numpy
 Pillow
 urllib.request
+stylecloud
 
