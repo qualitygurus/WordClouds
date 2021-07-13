@@ -69,7 +69,7 @@ if monochrom == 'Grey':
 elif monochrom =='Monochromatic':
   plt.imshow(wc.recolor(color_func=image_colors), interpolation="bilinear")
 else:  
-  plt.imshow(wordcloud)
+  plt.imshow(wc)
   
 
 plt.axis('off')
