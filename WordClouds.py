@@ -66,7 +66,7 @@ image_colors = ImageColorGenerator(mask)
 
 if monochrom == 'Grey':
   plt.imshow(wc.recolor(color_func=grey_color_func, random_state=3), interpolation="bilinear")
-elseif monochrom='Monochromatic':
+elseif monochrom =='Monochromatic':
   plt.imshow(wc.recolor(color_func=image_colors), interpolation="bilinear")
 else:  
   plt.imshow(wordcloud)
