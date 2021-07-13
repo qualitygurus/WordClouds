@@ -7,4 +7,5 @@ wordcloud
 matplotlib
 numpy
 urllib.request
+PIL
 
