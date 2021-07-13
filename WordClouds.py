@@ -5,7 +5,6 @@ from wordcloud import WordCloud, STOPWORDS, ImageColorGenerator
 import matplotlib.pyplot as plt
 import random
 from PIL import Image, ImageFilter
-import stylecloud
 
 
 def grey_color_func(word, font_size, position, orientation, random_state=None,
