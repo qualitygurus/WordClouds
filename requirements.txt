@@ -6,6 +6,5 @@ bs4
 wordcloud
 matplotlib
 numpy
-Pillow
 urllib.request
 
