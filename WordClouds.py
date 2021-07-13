@@ -54,7 +54,8 @@ wordcount = st.sidebar.slider('Word Count', min_value=50, max_value=500, value=1
 textcol = st.sidebar.selectbox("Colour Palette:", ['viridis', 'Accent', 'Dark2', 'inferno', 'Greys', 'gist_gray', 'Reds','hot', 'Set1'])
 
 #Font
-textfont = st.sidebar.selectbox("Select Font:", ['Roboto-Bold.ttf', 'BungeeShade-Regular.ttf'])
+textfont = st.sidebar.selectbox("Select Font:", ['Roboto-Bold.ttf', 'BungeeShade-Regular.ttf', 'Caveat-Bold.ttf', 'DancingScript-Bold.ttf', 'Pacifico-Regular.ttf', 
+                                                'PermanentMarker-Regular.ttf', 'Rye-Regular.ttf'])
 
 plt.figure( figsize=(20,10), facecolor='white')
 wc = WordCloud(stopwords=STOPWORDS, font_path='font/'+textfont,
