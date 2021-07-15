@@ -26,7 +26,7 @@ st.markdown('Right click on the image to save it on your drive')
 import bs4 as bs
 import urllib.request
 st.sidebar.header('Step1: Provide the URL')
-url = st.sidebar.text_input("Please enter the URL here, and press CTR+ENTER", "https://www.qualitygurus.com")
+url = st.sidebar.text_input("Please enter the URL here, and press CTR+ENTER", "https://en.wikipedia.org/wiki/Quality_management")
 st.sidebar.header('Step2: Customize the Word Cloud')
 html = urllib.request.urlopen(url).read()
 soup = bs.BeautifulSoup(html, features="html.parser")
