@@ -37,7 +37,7 @@ articletext = articletext + (10 * 'qualitygurus ')
 STOPWORDS.update(['apply', 'evaluate', 'analyze', 'analysis', 'edit', 'will', 'using', 'A', 'B', 'C', 'D', 'E'])
 
 #Background image
-backoption = st.sidebar.selectbox('Select Background Image', ['Thumb', 'Bulb', 'Square', 'World Map', 'Car', 'Bird', 'Man', 'Tree1', 'Tree2', 'Cloud', 'Heart'])
+backoption = st.sidebar.selectbox('Select Background Image', ['LinkedIn Cover', 'Square', 'Thumb', 'World Map','Man', 'Tree1', 'Tree2', 'Cloud', 'Heart'])
 backimage = backoption+'.jpg'
 mask = np.array(Image.open(backimage))
 
@@ -45,7 +45,7 @@ mask = np.array(Image.open(backimage))
 contourwidth = st.sidebar.slider('Contour Width', min_value=0, max_value=5, value=2, step=1)
 
 #Background color
-backcolor = st.sidebar.selectbox('Select Background Color', ['white', 'black', 'slategrey', 'wheat', 'firebrick', 'lightgreen', 'lavender'])
+backcolor = st.sidebar.selectbox('Select Background Color', ['black', 'white', 'slategrey', 'wheat', 'firebrick', 'lightgreen', 'lavender'])
 
 #Number of words to be included
 wordcount = st.sidebar.slider('Word Count', min_value=50, max_value=500, value=150, step=50)
@@ -54,8 +54,8 @@ wordcount = st.sidebar.slider('Word Count', min_value=50, max_value=500, value=1
 textcol = st.sidebar.selectbox("Colour Palette:", ['viridis', 'Accent', 'Dark2', 'inferno', 'Greys', 'gist_gray', 'Reds','hot', 'Set1'])
 
 #Font
-textfont = st.sidebar.selectbox("Select Font:", ['Roboto-Bold.ttf', 'BungeeShade-Regular.ttf', 'Caveat-Bold.ttf', 'DancingScript-Bold.ttf', 'Pacifico-Regular.ttf', 
-                                                'PermanentMarker-Regular.ttf', 'Rye-Regular.ttf'])
+textfont = st.sidebar.selectbox("Select Font:", ['Rye-Regular.ttf', 'Roboto-Bold.ttf', 'BungeeShade-Regular.ttf', 'Caveat-Bold.ttf', 'DancingScript-Bold.ttf', 'Pacifico-Regular.ttf', 
+                                                'PermanentMarker-Regular.ttf'])
 
 plt.figure( figsize=(20,10), facecolor='white')
 wc = WordCloud(stopwords=STOPWORDS, font_path='font/'+textfont,
