@@ -33,8 +33,13 @@ soup = bs.BeautifulSoup(html, features="html.parser")
 articletext = soup.get_text()
 
 
-articletext = articletext + (10 * 'qualitygurus ')
-STOPWORDS.update(['apply', 'evaluate', 'analyze', 'analysis', 'edit', 'will', 'using', 'A', 'B', 'C', 'D', 'E'])
+articletext = articletext + (10 * 'qualitygurus')
+extra = st.text_input("Any extra word to add to the Word Cloud?", "")
+if extra is not None:
+    articletext = articletext + (20 * extra)
+
+
+STOPWORDS.update(['apply', 'evaluate', 'analyze', 'analysis', 'edit', 'will', 'using', 'A', 'B', 'C', 'D', 'E', 'ISBN', 'OCLC'])
 
 #Background image
 backoption = st.sidebar.selectbox('Select Background Image', ['LinkedIn Cover', 'Square', 'Thumb', 'World Map','Man', 'Tree1', 'Tree2', 'Cloud', 'Heart'])
@@ -45,7 +50,7 @@ mask = np.array(Image.open(backimage))
 contourwidth = st.sidebar.slider('Contour Width', min_value=0, max_value=5, value=2, step=1)
 
 #Background color
-backcolor = st.sidebar.selectbox('Select Background Color', ['black', 'white', 'slategrey', 'wheat', 'firebrick', 'lightgreen', 'lavender'])
+backcolor = st.sidebar.selectbox('Select Background Color', ['black', 'white', 'slategrey'])
 
 #Number of words to be included
 wordcount = st.sidebar.slider('Word Count', min_value=50, max_value=500, value=150, step=50)
