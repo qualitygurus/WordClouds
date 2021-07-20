@@ -36,7 +36,7 @@ articletext = soup.get_text()
 articletext = articletext + (10 * 'qualitygurus ')
 extra = st.text_input("Any extra word to add to the Word Cloud?", "")
 if extra is not None:
-    articletext = articletext + (50 * (extra+' '))
+    articletext = articletext + str(50 * (extra+' '))
 
 
 STOPWORDS.update(['apply', 'evaluate', 'analyze', 'analysis', 'edit', 'will', 'using', 'A', 'B', 'C', 'D', 'E', 'ISBN', 'OCLC'])
