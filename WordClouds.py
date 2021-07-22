@@ -87,6 +87,4 @@ plt.axis('off')
 fig1 = plt.show()
 st.pyplot(fig1)
 
-freq = str(WordCloud().process_text(text))
-st.write(freq)
 
