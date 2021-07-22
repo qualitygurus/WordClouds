@@ -87,5 +87,5 @@ plt.axis('off')
 fig1 = plt.show()
 st.pyplot(fig1)
 
-WordCloud().process_text(text)
+st.write(WordCloud().process_text(text))
 
