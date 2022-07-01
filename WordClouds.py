@@ -42,7 +42,7 @@ if extra is not None:
 STOPWORDS.update(['apply', 'evaluate', 'analyze', 'analysis', 'edit', 'will', 'using', 'A', 'B', 'C', 'D', 'E', 'ISBN', 'OCLC'])
 
 #Background image
-backoption = st.sidebar.selectbox('Select Background Image', ['LinkedIn Cover', 'SHD', 'Square', 'Thumb', 'World Map','Man', 'Tree1', 'Tree2', 'Cloud', 'Heart'])
+backoption = st.sidebar.selectbox('Select Background Image', ['LinkedIn Cover', 'SHD', 'Vertical', 'Square', 'Thumb', 'World Map','Man', 'Tree1', 'Tree2', 'Cloud', 'Heart'])
 backimage = backoption+'.jpg'
 mask = np.array(Image.open(backimage))
 
