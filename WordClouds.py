@@ -39,7 +39,7 @@ if extra is not None:
     articletext = articletext + 50 * str(' ' + extra + ' ')
 
 
-STOPWORDS.update(['trewq', 'name', 'Main', '_CONFIG_colors_paletts', 'f2bba', 'f3080', 'post', 'h 1' 'h s', 'next', 'ExampleHeading', 'h1', 's1', 'hsl_parent_dependency', 'val', 'rgba', 'apply', 'evaluate', 'analyze', 'analysis', 'edit', 'will', 'using', 'A', 'B', 'C', 'D', 'E', 'ISBN', 'OCLC'])
+STOPWORDS.update(['gradients', 'l s', 'trewq', 'name', 'Main', '_CONFIG_colors_paletts', 'f2bba', 'f3080', 'post', 'h 1','h s', 'next', 'ExampleHeading', 'h1', 's1', 'hsl_parent_dependency', 'val', 'rgba', 'apply', 'evaluate', 'analyze', 'analysis', 'edit', 'will', 'using', 'A', 'B', 'C', 'D', 'E', 'ISBN', 'OCLC'])
 
 #Background image
 backoption = st.sidebar.selectbox('Select Background Image', ['LinkedIn Cover', 'SHD', 'Vertical', 'Square', 'Thumb', 'World Map','Man', 'Tree1', 'Tree2', 'Cloud', 'Heart'])
